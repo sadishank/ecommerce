@@ -1,0 +1,886 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+h4 {
+    font-size: 46px;
+    color: black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    margin: 15px 0 20px 0;
+    color: rgb(164, 91, 91);
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.white {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 30px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+button.normal {
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 30px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    transition: 0.2s ease-in-out;
+}
+
+body {
+    width: 100%;
+    min-width: 100vh;
+    overflow-x: hidden;
+
+}
+
+.logo {
+    width: 70px;
+    height: 40px;
+
+}
+
+
+/* HEADER sTART HERE mathi ko line wwala sabai 
+nav bar menu haru and logos */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background: rgb(187, 195, 196);
+    box-shadow: 0 5px 15px rgb(0, 0, 0);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+
+#navbar li a:hover {
+    color: rgb(204, 63, 63);
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: rgb(10, 177, 102);
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+/*middle  neymar photo h1 h4 h2*/
+#mid {
+    background-image: url("img/mid.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 15% right 0%;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+#mid2 {
+    background-image: url("img/mid.jpg");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 15% right 0%;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+/* Login and Register wala */
+
+#midlogin {
+    background-image: url("img/mid\ login.jpg");
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: top 15% right 0%;
+    padding: 0 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#midlogin span {
+    color: #088178;
+    text-decoration: underline;
+
+}
+
+.wrapper h2 {
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    height: 50px;
+    background-color: #f1f1f1;
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #088178;
+
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    font-size: 14.5px;
+
+}
+
+.remember-forgot label input {
+    accent-color: rgb(0, 0, 0);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: red;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    color: blue;
+    transition: 0.4s;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    background-color: #088178;
+
+}
+
+.wrapper {
+    border: solid;
+    border-radius: 40px;
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+}
+
+
+#mid h4 {
+    padding-bottom: 15px;
+}
+
+#mid h1 {
+    color: #088178;
+}
+
+#mid button {
+    display: inline-block;
+    text-decoration: none;
+    border: 4px solid;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 13px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#mid button:hover {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    background-color: #088178;
+    transition: 0.3s;
+    border-color: black;
+}
+
+/* featured Products ko suru ball haru yeta uti add to card*/
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro {
+    width: 20%;
+    min-width: 260px;
+    padding: 15px 15px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 5px 10px 10px #ffffff;
+    margin: 20px 0px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgb(0, 0, 0);
+
+
+}
+
+#product1 .pro .img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+#product1 .pro .desc {
+    text-align: start;
+    padding: 10px 0px;
+}
+
+#product1 .pro .desc h5 {
+    padding: 7px;
+    color: #b00f0f;
+    font-size: 18px;
+    text-align: start;
+}
+
+#product1 .pro .desc i {
+    font-size: 18px;
+    color: rgb(243, 181, 25);
+}
+
+#product1 .pro .desc h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 1000;
+    color: #088178;
+}
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: rgb(195, 207, 207);
+    font-weight: 1000;
+    color: #088178;
+    border: 1px solid grey;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+/*40% off wala banner discount explore more wala//////////////*/
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/dbanner4.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: white;
+    font-size: 16px;
+}
+
+#banner h2 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding: 10px 0;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+
+#banner h2 span {
+    color: rgb(0, 251, 109);
+}
+
+#banner button:hover {
+    background-color: #53f800;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+
+}
+
+/* banner haru deals wala footbal and basket */
+
+#sm-banner {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#sm-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/minban2.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#sm-banner .banner-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/minban1.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    margin-left: 20px;
+}
+
+#sm-banner h4 {
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+#sm-banner h2 {
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button {
+    background: #088178;
+    border: 1px solid #088178;
+}
+
+
+/* sano sano banner tt shoes and cricket */
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("img/minban8.1.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+
+}
+
+#banner3 h2 {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 15px;
+}
+
+#banner3 .banner-box2 {
+    background-image: url(img/minban3.1.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+#banner3 .banner-box3 {
+    background-image: url(img/minban5.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+#banner3 .banner-box3:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 20px 20px 30px rgb(0, 0, 0);
+}
+
+#banner3 .banner-box2:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 20px 20px 30px rgb(0, 0, 0);
+}
+
+#banner3 .banner-box:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 20px 20px 30px rgb(0, 0, 0);
+}
+
+
+/* singnup wala box ko  */
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(img/hi4.png);
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: black;
+
+}
+
+#newsletter h4 {
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+}
+
+#newsletter p {
+    font-size: 22px;
+    font-weight: 500;
+    color: #088178;
+}
+
+#newsletter p span {
+    color: #ff0000d7;
+    font-weight: 800;
+}
+
+#newsletter .form {
+    display: flex;
+    width: 30%;
+}
+
+#newsletter input {
+    height: 3.1rem;
+    padding: 0 1.2rem;
+    font-size: 14px;
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button {
+    background-color: #088178;
+    color: white;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+/* footer ma vako jati sabai */
+
+.logo1 {
+    width: 100px;
+    height: 100px;
+
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer.col {
+    display: flex;
+    flex-wrap: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer .logo1 {
+    margin-bottom: 30px;
+}
+
+footer h4 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 10px;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: grey;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover {
+    color: #088178;
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+}
+
+/* media query for responsivness */
+@media (max-width:799px) {
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: white;
+        box-shadow: 0 40px 60px black;
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+        color: black;
+        font-size: 23px;
+        padding-left: 20px;
+
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: black;
+        font-size: 24;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #mid {
+        height: 90vh;
+        background-position: top 20% right 30%;
+        padding: 0 80px;
+    }
+
+    #product1 .pro-container {
+        justify-content: space-between;
+        padding-top: 20px 20px;
+        flex-wrap: wrap;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    #banner {
+        height: 30vh;
+    }
+
+    #sm-banner .banner-box {
+        min-width: 100%;
+        height: 30vh;
+    }
+
+
+
+    #banner3 {
+        padding: 0 20px;
+    }
+
+    #newsletter .form {
+        display: flex;
+        width: 90%;
+    }
+
+}
+
+
+
+/* shop page */
+
+#shop-header {
+    background-image: url(img/shopban3.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+}
+
+#shop-header h2 {
+    color: whitesmoke;
+    text-decoration: underline;
+}
+
+#shop-header p {
+    color: rgb(255, 0, 0);
+    font-weight: 800px;
+    font-size: 22px;
+
+}
+
+#shop-header span {
+    color: #088178;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    color: white;
+    font-weight: 600;
+}
+
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600px;
+}
+
+
+/* single products */
+
+#prodetails {
+    display: flex;
+    margin-top: 30px;
+}
+
+#prodetails .single-pro-image {
+    width: 25%;
+    margin-right: 50px;
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 60%;
+    cursor: pointer;
+}
+
+.small-img-col {
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details button {
+    background-color: #088178;
+    color: whitesmoke;
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+}
+
+#prodetails .single-pro-details span {
+    line-height: 25px;
+}
